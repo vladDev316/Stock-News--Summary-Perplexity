@@ -4,7 +4,7 @@ This project uses the OpenRouter API with Perplexity Sonar Reasoning Pro to summ
 
 ## Prerequisites
 
-- Python 3.7 or higher
+- Python 3.12 
 - OpenRouter API key (see .env setup below)
 - `.env` file with your API key
 
