@@ -1,0 +1,20 @@
+# Python virtual environment
+venv/
+
+# Output CSV files
+stock_summaries_*.csv
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VSCode settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db 
