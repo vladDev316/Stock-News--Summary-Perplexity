@@ -29,7 +29,7 @@ pip install -r requirements.txt
 ### 2. Verify Files
 
 Make sure you have these files in your project directory:
-- `stock_news_summary.py` - Main script using Perplexity Sonar Reasoning Pro
+- `stock_news_summary_perplexity.py` - Main script using Perplexity Sonar Reasoning Pro
 - `stock_news_summary_grok3.py` - Alternative script using Grok3 (x-ai/grok-3)
 - `tickers.txt` - List of stock tickers to process
 - `requirements.txt` - Python dependencies
@@ -40,7 +40,7 @@ You can use either script, depending on which model you want to use:
 
 **To use Perplexity Sonar Reasoning Pro:**
 ```bash
-python stock_news_summary.py
+python stock_news_summary_perplexity.py
 ```
 
 **To use Grok3 (x-ai/grok-3):**

@@ -103,9 +103,9 @@ def main():
             news = get_openrouter_response_grok3(get_news_prompt(ticker))
             append_to_csv(csv_filename, ticker, "News", news)
             
-            # Wait 60 seconds before next request
-            print("  Waiting 60 seconds before next request...")
-            time.sleep(60)
+            # Wait 30 seconds before next request
+            print("  Waiting 30 seconds before next request...")
+            time.sleep(30)
             
             # Get forecast
             print(f"  Getting forecast for {ticker}...")
@@ -114,10 +114,10 @@ def main():
             
             print(f"  Saved data for {ticker} to CSV")
             
-            # Wait 60 seconds before next ticker (except for the last one)
+            # Wait 30 seconds before next ticker (except for the last one)
             if i < len(tickers):
-                print("  Waiting 60 seconds before next ticker...")
-                time.sleep(60)
+                print("  Waiting 30 seconds before next ticker...")
+                time.sleep(30)
                 
         except Exception as e:
             print(f"  Error processing {ticker}: {str(e)}")
