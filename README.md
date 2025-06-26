@@ -29,24 +29,35 @@ pip install -r requirements.txt
 ### 2. Verify Files
 
 Make sure you have these files in your project directory:
-- `stock_news_summary.py` - Main script
+- `stock_news_summary.py` - Main script using Perplexity Sonar Reasoning Pro
+- `stock_news_summary_grok3.py` - Alternative script using Grok3 (x-ai/grok-3)
 - `tickers.txt` - List of stock tickers to process
 - `requirements.txt` - Python dependencies
 
-### 3. Run the Script
+### 3. Run the Scripts
 
+You can use either script, depending on which model you want to use:
+
+**To use Perplexity Sonar Reasoning Pro:**
 ```bash
 python stock_news_summary.py
 ```
 
-## What the Script Does
+**To use Grok3 (x-ai/grok-3):**
+```bash
+python stock_news_summary_grok3.py
+```
 
-1. **Reads tickers** from `tickers.txt` (46 stocks including PLTR, TSLA, NVDA, etc.)
+Each script must be run separately. Both use the same prompts and logic, but differ in the model used for summarization and forecasting.
+
+## What the Scripts Do
+
+1. **Reads tickers** from `tickers.txt` (e.g., PLTR, TSLA, NVDA, etc.)
 2. **Processes each stock** with rate limiting (1 request per minute to avoid API overload)
 3. **Gets two types of data** for each stock:
    - Recent news summary
    - Short-term forecast and key drivers
-4. **Saves results** to a CSV file with timestamp (e.g., `stock_summaries_20250626_031106.csv`)
+4. **Saves results** to a CSV file with timestamp (e.g., `stock_summaries_20250626_031106.csv` or `stock_summaries_grok3_20250626_031106.csv`)
 
 ## Output Format
 
@@ -65,7 +76,8 @@ The CSV file contains these columns:
 
 ## Files Generated
 
-- `stock_summaries_YYYYMMDD_HHMMSS.csv` - Main output file with all results
+- `stock_summaries_YYYYMMDD_HHMMSS.csv` - Output from Perplexity script
+- `stock_summaries_grok3_YYYYMMDD_HHMMSS.csv` - Output from Grok3 script
 
 ## Troubleshooting
 
@@ -76,10 +88,10 @@ The CSV file contains these columns:
 ## Example Output
 
 ```
-Created CSV file: stock_summaries_20250626_031106.csv
+Created CSV file: stock_summaries_grok3_20250626_031106.csv
 Found 46 tickers to process.
 Rate limiting: 1 request per minute to avoid API overload.
-Results will be saved to: stock_summaries_20250626_031106.csv
+Results will be saved to: stock_summaries_grok3_20250626_031106.csv
 ==================================================
 
 Processing 1/46: PLTR
