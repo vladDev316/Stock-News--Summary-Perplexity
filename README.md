@@ -5,7 +5,18 @@ This project uses the OpenRouter API with Perplexity Sonar Reasoning Pro to summ
 ## Prerequisites
 
 - Python 3.7 or higher
-- OpenRouter API key (already configured in the script)
+- OpenRouter API key (see .env setup below)
+- `.env` file with your API key
+
+## .env File Setup
+
+Create a file named `.env` in the project root directory with the following content:
+
+```
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+```
+
+Replace `your_openrouter_api_key_here` with your actual OpenRouter API key. This key is required for the script to access the OpenRouter API.
 
 ## Setup Instructions
 
